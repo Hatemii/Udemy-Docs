@@ -14,5 +14,5 @@ class BlogController < ApplicationController
     @blog = Blog.new
   end
 
-  
+
 end
