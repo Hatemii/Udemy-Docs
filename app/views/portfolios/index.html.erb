@@ -2,10 +2,18 @@
 <h1>Portfolio Items</h1>
 
 
+
+<a href="portfolios/new">Create New Item</a>
+
+<%= link_to "Create New Item", new_portfolio_path , subdomain: "my_subdomain"%>
+
+
 <%= @portfolio_items.each do |p_item|%>
   <p><%= p_item.title %></p>
   <p><%= p_item.subtitle %></p>
   <p><%= p_item.body %></p>
   <%=image_tag p_item.thumb_image unless p_item.thumb_image.nil?%>
+  <%= link_to "Edit", edit_portfolio_path(p_item.id) %>
+  
 
 <% end %>
